@@ -5,17 +5,25 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%23233a2a%22/%3E%3Cpath d=%22m8 16 5 5 11-11%22 fill=%22none%22 stroke=%22%2370d796%22 stroke-width=%223%22/%3E%3C/svg%3E">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#121813">
+  <meta name="description" content="Review a past session, compare it with another day, and turn the pattern into an action plan.">
   <title>Sessions & Insights · Intention Checker</title>
   <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/session-details.css">
   <script src="../js/navigation.js" defer></script>
+  <script src="../js/session-data.js" defer></script>
+  <script src="../js/session-details.js" defer></script>
 </head>
 <body data-page="insights">
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="app-shell">
-    <header class="page-header"><h1>Sessions & Insights</h1></header>
-    <main id="main" class="page-content handoff" tabindex="-1">
-      <section class="card"><h2>Page awaiting integration</h2><p>Session details, comparison and insights will appear here when the Session Details page is integrated.</p></section>
-      <a class="button button-secondary" href="../index.html">Back to Home</a>
+    <header class="page-header session-header">
+      <a class="back-link" id="back-link" href="calendar.html" hidden><span aria-hidden="true">‹</span> Back<span class="visually-hidden" id="back-label"></span></a>
+      <h1 id="page-title">Sessions & Insights</h1>
+    </header>
+    <!-- Views are chosen by the query string: ?id=, ?pick=, ?compare=A,B, ?view=insights, ?view=action -->
+    <main id="main" class="page-content session-page" tabindex="-1">
+      <div id="view" class="session-view"></div>
+      <noscript><p class="notice">JavaScript is off. Session details and insights need JavaScript; <a href="../index.html">return to Home</a>.</p></noscript>
     </main>
     <nav class="bottom-nav" data-bottom-nav aria-label="Main navigation"></nav>
   </div>
