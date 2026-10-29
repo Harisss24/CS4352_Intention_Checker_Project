@@ -1,0 +1,57 @@
+.reminders { display: grid; align-content: start; gap: 1.25rem; }
+.reminders [hidden] { display: none !important; }
+.reminders .settings-intro { font-size: .9rem; }
+.reminders .settings-hint { font-size: .8rem; margin-top: .4rem; line-height: 1.6; }
+.reminders .settings-apps { display: grid; gap: .6rem; margin-top: 1rem; }
+.reminders .settings-app { display: flex; gap: .8rem; align-items: center; min-height: 84px; text-decoration: none; }
+.reminders .settings-app > span:nth-child(2) { flex: 1; min-width: 0; }
+.reminders .settings-app strong { display: block; font-weight: 600; }
+.reminders .settings-app small { display: block; color: var(--color-muted); margin-top: .15rem; font-size: .75rem; }
+.reminders .settings-app > span:last-child { color: var(--color-muted); font-size: 1.4rem; }
+.reminders .settings-app-icon { flex-shrink: 0; display: grid; place-items: center; width: 38px; height: 38px; border-radius: .7rem; color: white; font-size: .85rem; font-weight: 700; }
+.reminders .instagram { background: linear-gradient(45deg, #a54700, #b11c83, #5851db); }
+.reminders .tiktok { background: #111; border: 1px solid #69756b; }
+.reminders .youtube { background: #b91c16; }
+.reminders .settings-information { display: grid; gap: .6rem; margin-top: 1.5rem; }
+.reminders details { padding: 0; }
+.reminders summary { cursor: pointer; padding: 1rem; min-height: 52px; font-size: .9rem; font-weight: 550; }
+.reminders details p { color: var(--color-muted); font-size: .85rem; padding: 0 1rem 1rem; }
+.reminders .settings-back { display: inline-flex; align-items: center; min-height: 44px; color: var(--color-accent); text-decoration: none; font-size: .85rem; margin-top: -.5rem; }
+.reminders .settings-app-heading { display: flex; align-items: center; gap: .75rem; margin: .5rem 0 1.25rem; }
+.reminders .settings-app-heading h2 { font-size: 1.15rem; }
+.reminders .settings-app-heading p { font-size: .75rem; margin-top: .2rem; }
+.reminders form { display: grid; gap: 1rem; }
+.reminders .settings-controls { margin: 0; min-width: 0; }
+.reminders fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+.reminders fieldset.card { border: 1px solid var(--color-border); padding: .4rem 1rem 1rem; }
+.reminders legend { font-size: .9rem; font-weight: 650; padding: 0 .35rem; }
+.reminders .settings-controls h3 { font-size: .9rem; margin-bottom: .25rem; }
+.reminders .settings-toggle { display: flex; align-items: center; gap: .75rem; position: relative; min-height: 64px; cursor: pointer; }
+.reminders .settings-toggle > span:first-child { flex: 1; font-size: .9rem; }
+.reminders .settings-toggle small { display: block; color: var(--color-muted); font-size: .7rem; margin-top: .15rem; }
+.reminders .settings-toggle + .settings-toggle { border-top: 1px solid var(--color-border); }
+.reminders .settings-toggle input { position: absolute; right: 0; width: 44px; height: 28px; opacity: 0; margin: 0; cursor: pointer; }
+.reminders .switch-track { display: block; flex-shrink: 0; width: 44px; height: 26px; border-radius: 20px; background: #637168; border: 1px solid var(--color-muted); pointer-events: none; }
+.reminders .switch-track::after { content: ''; display: block; width: 18px; height: 18px; margin: 3px; border-radius: 50%; background: #fff; }
+.reminders input:checked + .switch-track { background: var(--color-primary); border-color: var(--color-accent); }
+.reminders input:checked + .switch-track::after { transform: translateX(18px); }
+.reminders input:focus-visible + .switch-track { outline: 3px solid var(--color-accent); outline-offset: 4px; }
+.reminders .settings-frequency { display: flex; align-items: center; flex-wrap: wrap; gap: .5rem; border-top: 1px solid var(--color-border); padding-top: .8rem; font-size: .85rem; }
+.reminders .settings-frequency > span { flex: 1; }
+.reminders select { background: var(--color-bg); color: var(--color-text); border: 1px solid var(--color-border); border-radius: .6rem; min-height: 44px; padding: .5rem; font-size: .85rem; max-width: 100%; }
+.reminders fieldset:disabled .settings-toggle, .reminders fieldset:disabled .settings-frequency { opacity: .55; cursor: default; }
+.reminders .settings-preview-area > button, .reminders .settings-save { width: 100%; }
+.reminders button:disabled { opacity: .55; cursor: default; }
+.reminders .settings-preview { margin-top: .75rem; padding: 1rem; border-radius: var(--radius); border: 1px solid var(--color-accent); background: var(--color-selected); }
+.reminders .settings-preview-top { display: flex; align-items: center; justify-content: space-between; margin-top: -.4rem; }
+.reminders .settings-demo { color: var(--color-accent); font-size: .7rem; font-weight: 650; }
+.reminders .settings-dismiss { background: transparent; border: 0; color: var(--color-text); font-size: 1.5rem; min-width: 44px; min-height: 44px; cursor: pointer; }
+.reminders .settings-preview h3 { font-size: 1rem; }
+.reminders .settings-preview p { margin-top: .4rem; font-size: .8rem; }
+.reminders .settings-preview p:last-child { font-size: .7rem; }
+.reminders .settings-save-status { color: var(--color-accent); font-size: .85rem; }
+.reminders .settings-save-status:empty { display: none; }
+.reminders .settings-footnote { font-size: .75rem; }
+.reminders .notice { font-size: .8rem; }
+.reminders #save-error { color: var(--color-danger); }
+.reminders .settings-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
