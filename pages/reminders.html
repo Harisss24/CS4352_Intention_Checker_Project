@@ -7,15 +7,58 @@
   <meta name="theme-color" content="#121813">
   <title>Settings · Intention Checker</title>
   <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/reminders.css">
   <script src="../js/navigation.js" defer></script>
+  <script src="../js/reminders.js" defer></script>
 </head>
 <body data-page="settings">
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="app-shell">
     <header class="page-header"><h1>Settings</h1></header>
-    <main id="main" class="page-content handoff" tabindex="-1">
-      <section class="card"><h2>Page awaiting integration</h2><p>App reminder settings will appear here when the Reminders page is integrated.</p></section>
-      <a class="button button-secondary" href="../index.html">Back to Home</a>
+    <main id="main" class="page-content reminders" tabindex="-1">
+      <p class="muted settings-intro">A gentle check-in, on your terms.</p>
+      <p id="storage-warning" class="notice" role="status" hidden></p>
+      <section id="settings-overview" aria-labelledby="apps-heading">
+        <h2 id="apps-heading">App Reminders</h2>
+        <p class="muted settings-hint">App-specific settings · Choose an app to customize.</p>
+        <div class="settings-apps">
+          <a class="card settings-app" href="?app=instagram"><span class="settings-app-icon instagram" aria-hidden="true">Ig</span><span><strong>Instagram</strong><small id="summary-instagram">Configure reminders</small></span><span aria-hidden="true">›</span></a>
+          <a class="card settings-app" href="?app=tiktok"><span class="settings-app-icon tiktok" aria-hidden="true">Tk</span><span><strong>TikTok</strong><small id="summary-tiktok">Configure reminders</small></span><span aria-hidden="true">›</span></a>
+          <a class="card settings-app" href="?app=youtube"><span class="settings-app-icon youtube" aria-hidden="true">▶</span><span><strong>YouTube</strong><small id="summary-youtube">Configure reminders</small></span><span aria-hidden="true">›</span></a>
+        </div>
+        <div class="settings-information">
+          <details class="card"><summary>General Preferences</summary><p>Reminder frequency and notification preferences are set separately for each app. Turning reminders off keeps your choices for next time.</p></details>
+          <details class="card"><summary>Data &amp; Privacy</summary><p>Preferences are saved only in this browser. This demo does not collect phone usage or send your settings to a server.</p></details>
+          <details class="card"><summary>Help &amp; About</summary><p>Choose an app, adjust your reminders, then select Save Changes. Preview shows a sample check-in here; sound, vibration and app notifications are simulated.</p></details>
+        </div>
+      </section>
+      <section id="app-settings" aria-labelledby="app-heading" hidden>
+        <a class="settings-back" href="reminders.html">‹ All Settings</a>
+        <div class="settings-app-heading"><span id="selected-app-icon" class="settings-app-icon" aria-hidden="true"></span><div><h2 id="app-heading" tabindex="-1">App Settings</h2><p class="muted">Make room for a mindful pause.</p></div></div>
+        <form id="reminder-form">
+          <section class="card settings-controls" aria-labelledby="reminder-heading">
+            <h3 id="reminder-heading">App Reminders</h3>
+            <label class="settings-toggle" for="reminders-enabled"><span>Enable reminders<small>Check in during a demo session.</small></span><input id="reminders-enabled" type="checkbox" role="switch"><span class="switch-track" aria-hidden="true"></span></label>
+            <fieldset id="frequency-controls"><legend class="settings-sr-only">Reminder timing</legend><label class="settings-frequency" for="reminder-frequency"><span>Reminder Frequency</span><select id="reminder-frequency"><option value="5">5 minutes</option><option value="10">10 minutes</option><option value="15">15 minutes</option><option value="30">30 minutes</option></select></label></fieldset>
+            <p id="disabled-note" class="muted settings-hint" hidden>Reminders are off. Your frequency and notification choices will be kept.</p>
+          </section>
+          <fieldset id="notification-controls" class="card settings-controls"><legend>Notification Style</legend>
+            <label class="settings-toggle" for="reminder-sound"><span>Sound<small>Simulated audio cue.</small></span><input id="reminder-sound" type="checkbox" role="switch"><span class="switch-track" aria-hidden="true"></span></label>
+            <label class="settings-toggle" for="reminder-vibration"><span>Vibration<small>Simulated gentle buzz.</small></span><input id="reminder-vibration" type="checkbox" role="switch"><span class="switch-track" aria-hidden="true"></span></label>
+            <label class="settings-toggle" for="reminder-in-app"><span>Show In-App<small>A visible reminder in the demo.</small></span><input id="reminder-in-app" type="checkbox" role="switch"><span class="switch-track" aria-hidden="true"></span></label>
+          </fieldset>
+          <p id="silent-note" class="notice" hidden>All notification styles are off. No visible, sound or vibration reminder will be shown.</p>
+          <div class="settings-preview-area"><button class="button button-secondary" id="preview-button" type="button" aria-expanded="false" aria-controls="reminder-preview">Preview Reminder</button>
+            <section id="reminder-preview" class="settings-preview" aria-labelledby="preview-heading" hidden><div class="settings-preview-top"><span class="settings-demo">Preview only</span><button type="button" id="dismiss-preview" class="settings-dismiss" aria-label="Dismiss reminder preview">×</button></div><h3 id="preview-heading" tabindex="-1">Time check!</h3><p id="preview-message"></p><p id="preview-style" class="muted"></p><p class="muted">An in-page sample. No sound, vibration or device notification is triggered.</p></section>
+          </div>
+          <p id="draft-note" class="muted settings-hint">Changes are saved only when you select Save Changes.</p>
+          <button class="button settings-save" type="submit">Save Changes</button>
+          <p id="save-status" class="settings-save-status" role="status" aria-live="polite"></p>
+          <p id="save-error" class="notice" role="alert" hidden></p>
+        </form>
+      </section>
+      <p class="muted settings-footnote">Practice, pause, reflect. Reminders in this project are simulated.</p>
+      <noscript><p class="notice">Enable JavaScript to configure and save reminders. <a href="../index.html">Back to Home</a></p></noscript>
     </main>
     <nav class="bottom-nav" data-bottom-nav aria-label="Main navigation"></nav>
   </div>
