@@ -12,9 +12,11 @@ Built for **CS 4352 – Human Computer Interaction** at the University of Texas 
 
 You only need a modern web browser (Chrome, Edge, Firefox, or Safari). No Node, no package install, no build step.
 
-### Option 1 — Open the deployed site
+### Option 1 — Open the deployed site (Netlify)
 
-> _Netlify link will be added here once the project is deployed._
+If the team has deployed the app to Netlify, open the site link (shown in the repository's **About** section on GitHub) in any browser, on your phone or computer. Nothing to download. Then follow [How the UI works](#how-the-ui-works) below.
+
+The app is a static site, so it can be deployed with no build settings: in Netlify choose **Add new site → Import from GitHub**, select this repository, leave the build command empty, and set the publish directory to the repository root.
 
 ### Option 2 — Run from the source code
 
@@ -46,7 +48,7 @@ Every screen has a **bottom navigation bar** (Home · Calendar · Insights · Se
 | **Home / Dashboard** | `index.html` | Usage overview, list of social apps (Instagram, TikTok, YouTube), shortcuts to Calendar and Insights, recent session, and a Settings button. Tapping an app simulates opening it. |
 | **Intention Checker** | `pages/intention.html` | Pick a **reason** (Messages, Friends, Entertainment, Create content) and an **intended duration** (5/10/15/30 min), then **Start Session**. You'll see a simulated active session with a reminder (**Keep going** / **Close App**). Closing shows a **session summary** (reason, intended time, demo actual time). |
 | **Reminder Settings** | `pages/reminders.html` | Choose an app, toggle reminders, set the frequency (5/10/15/30 min), and pick notification preferences such as vibration. You can **preview** a reminder and **save**. Each app keeps its own settings. |
-| **Calendar** | `pages/calendar.html` | Browse past usage by date. _(Currently a placeholder; see Limitations.)_ |
+| **Calendar** | `pages/calendar.html` | Monthly calendar of past sessions (opens on **October 2026**). Use **‹ / ›** to change months. Each date is marked **Within time**, **Exceeded time**, or **No usage**. Select a date to list its sessions, then **View details**. Arrow keys move between dates. |
 | **Session Details & Insights** | `pages/session-details.html` | Inspect a session's reason, intended vs. actual time, and **compare** it with another day. **View Insights → Next → Action Plan → Go to Settings** takes you from reflection to changing your reminders. |
 
 ### Walkthrough: the three test tasks
@@ -55,7 +57,7 @@ These are the scenarios from our usability testing (DP3). Use them to try the ap
 
 1. **Set an intention (simple):** Home → **Instagram** → choose **Messages** → **10 minutes** → **Start Session** → **Close App** → review the summary → **Done**.
 2. **Customize reminders (moderate):** Home → **Settings** → **Instagram** → turn reminders **on** → frequency **every 5 minutes** → **vibration on** → **Save**. Refresh the page and reopen Instagram; your settings are still there.
-3. **Compare sessions (complex):** Home → **Recent session** (Instagram, Oct 15) → **Compare Sessions** → pick **October 14** → compare intended vs. actual time.
+3. **Compare sessions (complex):** Home → **Calendar** (bottom nav or **View Calendar**) → select **October 14** → Instagram → **View details** → **Back to Calendar** → select **October 15** → Instagram → **View details** → **Compare Sessions** → pick **October 14** to see both side by side.
    - Oct 14: 15 min intended → 24 min actual (**+9 min**)
    - Oct 15: 10 min intended → 28 min actual (**+18 min**), so this one went over by more.
 
@@ -72,8 +74,7 @@ These are the scenarios from our usability testing (DP3). Use them to try the ap
 ## Limitations
 
 - **Simulated only:** no real phone usage tracking, app interception, OS notifications, or background timers. "Actual time" in the session summary is a demo estimate.
-- **Calendar page not integrated yet:** `pages/calendar.html` currently shows a placeholder. Session comparison works through Session Details and Insights.
-- **Not deployed yet:** the Netlify link above is pending.
+- **Fixed demo history:** past sessions only exist from late September to mid-October 2026. Other months show "No sessions recorded", and new intentions you set are not added to the calendar.
 - **Saved settings are per browser:** they don't sync across devices or browsers and are lost if site data is cleared. Some browsers (notably Safari) may not keep localStorage for files opened via `file://`; use a local server if that happens.
 - **Fixed demo apps:** only Instagram, TikTok, and YouTube.
 
@@ -94,10 +95,10 @@ These are the scenarios from our usability testing (DP3). Use them to try the ap
 
 ## Team
 
-| Area | Owner |
+| Area | Owner (GitHub) |
 |---|---|
-| Intention Checker | Person 1 |
-| Reminder Settings | Person 2 |
-| Usage History Calendar | Person 3 |
-| Session Details & Comparison | Person 4 |
-| Dashboard & Navigation | Person 5 |
+| Intention Checker | [musa-mudesir](https://github.com/musa-mudesir) |
+| Reminder Settings | [Abubeoma000](https://github.com/Abubeoma000) |
+| Usage History Calendar | [anjaliayy](https://github.com/anjaliayy) |
+| Session Details, Comparison & Insights | [mmulic](https://github.com/mmulic) |
+| Dashboard & Navigation | [Harisss24](https://github.com/Harisss24) |
