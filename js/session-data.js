@@ -1,4 +1,5 @@
-/* Session-details sample history; page-scoped until the team approves a shared IC_DATA.
+/* Fixed late-October/November samples added for calendar exploration; original fixtures preserved.
+   Session-details sample history; page-scoped until the team approves a shared IC_DATA.
    Field names follow the session schema in docs/ARCHITECTURE.md so the fixtures can move
    into js/data.js unchanged. Oct 14/15 are the DP3 Task 3 fixture; Oct 12 matches the
    live prototype walkthrough. Oct 14 values were chosen by the Task 4 owner (pending team review). */
@@ -9,6 +10,19 @@ window.IC_SESSION_DATA = Object.freeze({
     Object.freeze({ id: "youtube", name: "YouTube", badge: "▶" })
   ]),
   sessions: Object.freeze([
+    Object.freeze({"id": "in-2026-10-18-sample", "appId": "instagram", "date": "2026-10-18", "startedAt": "16:10", "reason": "Messages", "intendedMinutes": 10, "actualMinutes": 8, "note": "Fixed sample session for calendar exploration."}),
+    Object.freeze({"id": "yo-2026-10-22-sample", "appId": "youtube", "date": "2026-10-22", "startedAt": "19:00", "reason": "Learning", "intendedMinutes": 30, "actualMinutes": 35, "note": "Fixed sample session for calendar exploration."}),
+    Object.freeze({"id": "ti-2026-10-27-sample", "appId": "tiktok", "date": "2026-10-27", "startedAt": "12:30", "reason": "Entertainment", "intendedMinutes": 15, "actualMinutes": 23, "note": "Fixed sample session for calendar exploration."}),
+    Object.freeze({"id": "in-2026-10-30-sample", "appId": "instagram", "date": "2026-10-30", "startedAt": "18:15", "reason": "Create content", "intendedMinutes": 20, "actualMinutes": 18, "note": "Fixed sample session for calendar exploration."}),
+    Object.freeze({"id": "in-2026-11-02-sample", "appId": "instagram", "date": "2026-11-02", "startedAt": "09:20", "reason": "Messages", "intendedMinutes": 10, "actualMinutes": 9, "note": "Fixed sample session for calendar exploration."}),
+    Object.freeze({"id": "ti-2026-11-04-sample", "appId": "tiktok", "date": "2026-11-04", "startedAt": "17:45", "reason": "Entertainment", "intendedMinutes": 15, "actualMinutes": 31, "note": "Fixed sample session for calendar exploration."}),
+    Object.freeze({"id": "yo-2026-11-07-sample", "appId": "youtube", "date": "2026-11-07", "startedAt": "14:00", "reason": "Learning", "intendedMinutes": 30, "actualMinutes": 24, "note": "Fixed sample session for calendar exploration."}),
+    Object.freeze({"id": "in-2026-11-09-sample", "appId": "instagram", "date": "2026-11-09", "startedAt": "20:10", "reason": "Friends", "intendedMinutes": 15, "actualMinutes": 22, "note": "Fixed sample session for calendar exploration."}),
+    Object.freeze({"id": "in-2026-11-12-sample", "appId": "instagram", "date": "2026-11-12", "startedAt": "13:15", "reason": "Messages", "intendedMinutes": 10, "actualMinutes": 10, "note": "Fixed sample session for calendar exploration."}),
+    Object.freeze({"id": "yo-2026-11-14-sample", "appId": "youtube", "date": "2026-11-14", "startedAt": "18:30", "reason": "Entertainment", "intendedMinutes": 20, "actualMinutes": 32, "note": "Fixed sample session for calendar exploration."}),
+    Object.freeze({"id": "ti-2026-11-19-sample", "appId": "tiktok", "date": "2026-11-19", "startedAt": "16:40", "reason": "Friends", "intendedMinutes": 10, "actualMinutes": 8, "note": "Fixed sample session for calendar exploration."}),
+    Object.freeze({"id": "in-2026-11-23-sample", "appId": "instagram", "date": "2026-11-23", "startedAt": "11:30", "reason": "Create content", "intendedMinutes": 20, "actualMinutes": 17, "note": "Fixed sample session for calendar exploration."}),
+    Object.freeze({"id": "yo-2026-11-28-sample", "appId": "youtube", "date": "2026-11-28", "startedAt": "21:00", "reason": "Entertainment", "intendedMinutes": 30, "actualMinutes": 45, "note": "Fixed sample session for calendar exploration."}),
     Object.freeze({
       id: "ig-2026-10-15-a",
       appId: "instagram",

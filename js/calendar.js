@@ -48,7 +48,7 @@
   }
   function dayStatus(iso) {
     const list = sessionsByDate.get(iso);
-    if (!list || !list.length) return iso > DEMO_TODAY ? "future" : "none";
+    if (!list || !list.length) return "none";
     return list.some(s => overrun(s) > 0) ? "over" : "within";
   }
   const statusText = { over: "exceeded intended time", within: "within intended time", none: "no usage", future: "upcoming, no data yet" };
@@ -116,7 +116,7 @@
       const count = (sessionsByDate.get(iso) || []).length;
       const isToday = iso === DEMO_TODAY;
       const isSelected = iso === selected;
-      const label = longDate(iso) + (isToday ? ", today" : "") + ", " +
+      const label = longDate(iso) + (isToday ? ", demo reference date" : "") + ", " +
         (count ? plural(count, "session") + ", " : "") + statusText[status];
       const button = el("button", {
         type: "button",
@@ -146,13 +146,11 @@
 
   function renderDay() {
     const list = sessionsByDate.get(selected) || [];
-    dayHeading.textContent = longDate(selected) + (selected === DEMO_TODAY ? " (Today)" : "");
+    dayHeading.textContent = longDate(selected) + (selected === DEMO_TODAY ? " (Demo reference date)" : "");
     sessionList.replaceChildren();
 
     if (!list.length) {
-      daySummary.textContent = selected > DEMO_TODAY
-        ? "This date is after today, so there is no usage yet."
-        : "No usage recorded on this date.";
+      daySummary.textContent = "No sample sessions on this date.";
       sessionList.append(el("li", { class: "empty-state" },
         compareBase ? "Choose a date with a marker to find a session to compare." : "Try a date with a green or orange marker."));
       return;
@@ -202,7 +200,7 @@
   function shiftMonth(delta) {
     const next = new Date(view.year, view.month + delta, 1);
     view = { year: next.getFullYear(), month: next.getMonth() };
-    renderMonth();
+    selectDate(toIso(view.year, view.month, 1), false);
   }
 
   grid.addEventListener("click", event => {

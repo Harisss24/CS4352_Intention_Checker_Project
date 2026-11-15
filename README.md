@@ -35,14 +35,12 @@ Displays usage statistics, recent activity, and navigation to the application's 
 - **JavaScript** — Interactive functionality and data processing
 - **localStorage** — Persisting user preferences and intentions
 - **GitHub** — Version control and team collaboration
-- **Netlify** — Web deployment
 
 The application uses primarily hardcoded sample data for demonstration and usability testing. No backend or database is required.
 
 ## Prototype
 
 The original interactive prototype can be accessed here:
-
 https://tranquil-jelly-3f1bf4.netlify.app/
 
 ## Required Usability Tasks
@@ -91,11 +89,11 @@ See [PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md) for the folder structure and de
 
 | Member | Responsibility |
 |---|---|
-| Person 1 | Intention Checker |
-| Person 2 | Reminder Settings |
-| Person 3 | Usage History Calendar |
-| Person 4 | Session Details & Comparison |
-| Person 5 | Dashboard & Navigation |
+| Musa Mudesir | Intention Checker |
+| Omar Abubeker | Reminder Settings |
+| Anjali Ayyapan | Usage History Calendar |
+| Muhamed Mulic | Session Details & Comparison |
+| Haris Ahmed | Dashboard & Navigation |
 
 ## Project Status
 

@@ -33,3 +33,14 @@
 .dashboard .simulation-note { font-size: .75rem; padding: .25rem .2rem; }
 @media (hover: hover) { .dashboard .app-row:hover, .dashboard .recent-entry:hover { background: var(--color-selected); } }
 @media (max-width: 350px) { .page-header { flex-wrap: wrap; } .dashboard .shortcut { padding: .75rem .5rem; } }
+
+/* DP3: larger labels and distinct session/settings destinations. */
+.settings-link { font-size: .95rem; }
+.settings-link .icon { width: 26px; height: 26px; }
+.dashboard .app-icon { width: 42px; height: 42px; font-size: 1rem; }
+.dashboard .section-hint, .dashboard .usage-note { font-size: .875rem; }
+.dashboard .shortcut small { font-size: .8rem; }
+.dashboard .app-reminders { display: flex; align-items: center; gap: .65rem; min-height: 48px; color: var(--color-accent); font-size: .9rem; padding-bottom: .5rem; text-decoration: none; border-radius: .25rem; }
+.dashboard .app-reminders-icon { display: grid; place-items: center; width: 42px; min-height: 42px; flex-shrink: 0; }
+.dashboard .app-reminders-icon .icon { width: 26px; height: 26px; }
+@media (hover: hover) { .dashboard .app-reminders:hover { background: var(--color-selected); text-decoration: underline; } }

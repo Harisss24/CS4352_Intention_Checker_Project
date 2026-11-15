@@ -18,7 +18,7 @@
   <div class="app-shell">
     <header class="page-header">
       <h1>Intention Checker</h1>
-      <a class="button button-quiet settings-link" href="pages/reminders.html"><span data-icon="settings"></span>Settings</a>
+      <a class="button button-quiet settings-link" href="pages/reminders.html"><span data-icon="settings"></span>Reminders</a>
     </header>
     <main id="main" class="page-content dashboard" tabindex="-1">
       <p class="demo-caption"><span class="demo-badge">Demo</span> October 15, 2026 · Sample usage</p>
@@ -29,26 +29,18 @@
         <p class="muted usage-note" id="usage-note">41 minutes remaining of the demo daily reference.</p>
       </section>
       <section class="card apps-card" aria-labelledby="apps-heading">
-        <h2 id="apps-heading">Most Used Apps</h2>
-        <p class="muted section-hint">Choose an app to set your intention.</p>
+        <h2 id="apps-heading">Start a demo session</h2>
+        <p class="muted section-hint">Choose an app to set an intention, or customize its reminders.</p>
         <ul class="app-list" id="app-list">
-          <li><a class="app-row" href="pages/intention.html?app=instagram"><span class="app-icon app-icon-instagram" aria-hidden="true">Ig</span><span class="app-name">Instagram</span><span class="app-time">42m</span><span class="chevron" aria-hidden="true">›</span></a></li>
-          <li><a class="app-row" href="pages/intention.html?app=tiktok"><span class="app-icon app-icon-tiktok" aria-hidden="true">Tk</span><span class="app-name">TikTok</span><span class="app-time">25m</span><span class="chevron" aria-hidden="true">›</span></a></li>
-          <li><a class="app-row" href="pages/intention.html?app=youtube"><span class="app-icon app-icon-youtube" aria-hidden="true">▶</span><span class="app-name">YouTube</span><span class="app-time">12m</span><span class="chevron" aria-hidden="true">›</span></a></li>
+          <li><a class="app-row" href="pages/intention.html?app=instagram"><span class="app-icon app-icon-instagram" aria-hidden="true">Ig</span><span class="app-name">Instagram</span><span class="app-time">42m</span><span class="chevron" aria-hidden="true">›</span></a><a class="app-reminders" href="pages/reminders.html?app=instagram"><span class="app-reminders-icon" data-icon="settings" aria-hidden="true"></span><span>Instagram reminder settings</span></a></li>
+          <li><a class="app-row" href="pages/intention.html?app=tiktok"><span class="app-icon app-icon-tiktok" aria-hidden="true">Tk</span><span class="app-name">TikTok</span><span class="app-time">25m</span><span class="chevron" aria-hidden="true">›</span></a><a class="app-reminders" href="pages/reminders.html?app=tiktok"><span class="app-reminders-icon" data-icon="settings" aria-hidden="true"></span><span>TikTok reminder settings</span></a></li>
+          <li><a class="app-row" href="pages/intention.html?app=youtube"><span class="app-icon app-icon-youtube" aria-hidden="true">▶</span><span class="app-name">YouTube</span><span class="app-time">12m</span><span class="chevron" aria-hidden="true">›</span></a><a class="app-reminders" href="pages/reminders.html?app=youtube"><span class="app-reminders-icon" data-icon="settings" aria-hidden="true"></span><span>YouTube reminder settings</span></a></li>
         </ul>
       </section>
       <div class="dashboard-shortcuts" aria-label="Explore your usage">
         <a class="card shortcut" href="pages/calendar.html?date=2026-10-15"><span data-icon="calendar"></span><span>View Calendar</span><small class="muted">Review & compare</small></a>
         <a class="card shortcut" href="pages/session-details.html?view=insights"><span data-icon="insights"></span><span>Insights</span><small class="muted">Patterns & next steps</small></a>
       </div>
-      <section class="card recent-card" aria-labelledby="recent-heading">
-        <h2 id="recent-heading">Recent Activity</h2>
-        <a class="recent-entry" href="pages/session-details.html?id=ig-2026-10-15-a">
-          <span class="recent-title">Instagram <span class="muted">· 2:30 PM</span><span class="chevron" aria-hidden="true">›</span></span>
-          <span class="muted">Messages · Intended 10m · Actual 28m</span>
-          <span class="status-warning">18 minutes over intention</span>
-        </a>
-      </section>
       <p class="simulation-note muted">A practice space for intentional use. App launches, usage and reminders are simulated.</p>
       <noscript><p class="notice">JavaScript is off. App and shortcut links still work; enable JavaScript for the shared bottom navigation.</p></noscript>
     </main>
