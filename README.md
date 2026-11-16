@@ -53,6 +53,8 @@ Every screen has a **bottom navigation bar** (Home · Calendar · Insights · Se
 
 ### Walkthrough: the three test tasks
 
+**Video walkthrough:** [Watch the narrated demonstration of all three tasks on YouTube](https://youtube.com/shorts/3NVKevXhX3k?feature=share).
+
 These are the scenarios from our usability testing (DP3). Use them to try the app.
 
 1. **Set an intention (simple):** Home → **Instagram** → choose **Messages** → **10 minutes** → **Start Session** → **Close App** → review the summary → **Done**.
