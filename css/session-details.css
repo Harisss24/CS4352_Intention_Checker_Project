@@ -70,3 +70,9 @@
 
 @media (hover: hover) { .session-header .back-link:hover { background: var(--color-selected); } }
 @media (max-width: 350px) { .session-page .compare-grid { gap: var(--space-2); } .session-page .compare-diff { font-size: 1.35rem; } }
+
+.session-page .daily-chart { list-style: none; padding: 0; display: grid; gap: .8rem; }
+.session-page .daily-chart a { display: block; font-size: .9rem; min-height: 44px; }
+.session-page .daily-bar { display: block; height: 10px; border-radius: 5px; margin-top: .25rem; }
+.session-page .daily-bar.is-over { background: var(--color-warning); }
+.session-page .daily-bar.is-within { background: var(--color-accent); }

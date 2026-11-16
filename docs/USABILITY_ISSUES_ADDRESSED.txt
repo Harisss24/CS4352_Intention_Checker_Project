@@ -1,0 +1,125 @@
+Usability Issues Addressed:
+    - The following 10 usability problems were identified in DP3's User Test
+      Analysis (slide 24), with supporting participant feedback on slides 21-26.
+      Each entry explains how the final implementation addresses the problem.
+
+    1. Unclear Settings Navigation
+       Problem: Participants had difficulty finding where to access settings.
+       Solution: Home now has a visible, text-labeled Reminders shortcut in its
+       header. The consistent bottom navigation also includes Settings, giving
+       users a predictable route to configuration from every page.
+
+    2. Poor Reminder Settings Discoverability
+       Problem: Users were unsure whether to open Instagram or general settings
+       to customize reminders.
+       Solution: Each app on Home has its own named reminder-settings link,
+       separate from the app row that starts an intention. The intention page
+       also links directly to the selected app's reminder settings.
+
+    3. Session Comparison Difficulty
+       Problem: Participants had trouble locating and completing comparisons.
+       Solution: Session details provide a labeled Compare Sessions action.
+       The comparison picker lists sessions from different dates, and the
+       result displays intended time, actual time, and the difference, with
+       a sentence explaining which session exceeded its intention more.
+
+    4. Unclear Feature Organization
+       Problem: Users did not know whether reminder customization belonged
+       under general preferences or app-specific settings.
+       Solution: Settings groups reminder configuration under App Reminders
+       and asks users to choose an app. Each app has its own reminder controls.
+       General Preferences explains that reminder timing and notification
+       choices are configured separately for each app.
+
+    5. Limited Comparison Visibility
+       Problem: Comparison was not immediately noticeable in usage history.
+       Solution: Calendar now displays a prominent Compare sessions across
+       dates button above the month grid, plus instructions explaining the
+       date-to-session-to-comparison flow. The shortcut begins with the
+       October 14 Instagram demo session and lets users choose another date.
+
+    6. Confusing Overall App Flow
+       Problem: Participants struggled to determine where different features
+       were located, including the Calendar entry point.
+       Solution: Home separates starting a demo session from configuring
+       reminders, and retains labeled View Calendar and Insights shortcuts.
+       Consistent Home, Calendar, Insights, and Settings navigation supports
+       movement between tasks. Calendar instructions and the insights-to-
+       action-plan-to-settings path explain the next available steps.
+
+    7. Unclear Insight Chart Color Coding
+       Problem: Participants wanted colors that made exceeded intentions
+       easier to recognize across dates.
+       Solution: Insights now includes a Session time by date chart. Green
+       bars represent sessions within intention; orange bars represent
+       sessions that exceeded it. A written legend, actual/intended minutes,
+       and over/under descriptions explain the result without relying only
+       on color. Each chart entry links to that session's details.
+
+    8. Cluttered Main Page
+       Problem: A busy Home screen made important destinations hard to find.
+       Solution: The Recent Activity card was removed to reduce competing
+       content. Home focuses on demo usage, starting sessions, app reminder
+       links, and the Calendar/Insights shortcuts. The app section is labeled
+       Start a demo session to make its purpose explicit.
+
+    9. Small Icons
+       Problem: Participants found feature icons difficult to notice.
+       Solution: Home app icons were enlarged to 42 by 42 pixels. Bottom
+       navigation icons are 28 by 28 pixels, and the Home reminder shortcut
+       icon is 26 by 26 pixels. Visible text accompanies these icons.
+
+    10. Small Text Labels
+        Problem: Participants requested larger, more readable labels.
+        Solution: Bottom navigation labels were increased to 0.875rem and
+        navigation targets to at least 68 pixels high. Home's reminder
+        shortcut uses 0.95rem text, explanatory hints use 0.875rem, and
+        shortcut descriptions use 0.8rem. App reminder links have a minimum
+        height of 44 pixels for easier selection.
+
+    - Additional Implementation Considerations:
+
+      Demo timer and session honesty:
+      A sample timer counts up after a valid intention is started. Its stored
+      start time lets the active session resume after refresh when browser
+      storage is available. Closing the demo session stops the timer and
+      shows the simulated summary. Summary duration remains the chosen goal
+      plus two minutes; the UI explicitly distinguishes this fixed demo value
+      from elapsed timer time. Reminders appear immediately for testing.
+      No installed app is opened, monitored, blocked, or controlled.
+
+      Calendar coverage and reproducibility:
+      Existing month navigation now has 13 additional fixed sample sessions:
+      four after October 15 and nine in November 2026. Dates include within-
+      intention and exceeded-intention examples. These are scattered sample
+      days, not regenerated random records, so demonstrations stay repeatable.
+      Month changes select the first day of the displayed month so the date
+      panel stays aligned with the calendar. Empty dates explain that no
+      sample sessions exist. October 15 remains the demo reference date.
+
+      Preserved comparison scenario:
+      October 14 Instagram remains 15 minutes intended and 24 actual
+      (9 minutes over). October 15 remains 10 intended and 28 actual
+      (18 minutes over). October 15 therefore exceeded its intention more.
+      The October 12 fixture is also retained for the reviewer walkthrough.
+
+      Accessibility and recovery:
+      Semantic buttons and links, visible focus styling, labeled form
+      controls, text explanations, and keyboard calendar navigation support
+      interaction without relying on icons or colors alone. The intention
+      form requires a reason and duration. Saved state is validated before
+      restoring it; storage failures do not prevent the demo from running.
+      The timer avoids announcing every second to screen-reader users.
+
+      Validation and limits:
+      Local-server checks in Edge exercised the intention/reminder/summary,
+      reminder-settings persistence, and calendar/comparison/insights/action-
+      plan workflows. Timer count-up and refresh restoration were checked.
+      Pages were checked for horizontal overflow at widths of 320, 390, and
+      1280 pixels. Seven existing reminder-storage regression tests passed.
+      Final browser checks found no console errors or failed requests.
+      Screenshots are in docs/screenshots/usability-*.png.
+      These are implementation checks, not a new participant usability study;
+      improved task success has not been measured with participants. The live
+      reference could not be accessed during implementation, so exact visual
+      fidelity is unverified. The project remains a frontend-only simulation.

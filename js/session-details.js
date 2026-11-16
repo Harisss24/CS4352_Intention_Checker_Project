@@ -236,6 +236,12 @@
             el("span", { class: "bar", "aria-hidden": "true", style: "height:" + (t.minutes / peak.minutes * 70) + "%" }),
             el("span", {}, t.part.label)))),
         el("p", {}, "You tend to spend more time on " + app.name + " " + peak.part.phrase + ".")),
+      el("section", { class: "card", "aria-labelledby": "daily-heading" },
+        el("h2", { id: "daily-heading" }, "Session time by date"),
+        el("p", { class: "muted" }, "Green: within intention. Orange: exceeded intention. Values show actual / intended minutes."),
+        el("ul", { class: "daily-chart" }, sessions.slice().sort((a,b) => a.date.localeCompare(b.date)).map(s =>
+          el("li", {}, el("a", { href: routes.details(s.id) }, shortDate(s.date) + ": " + s.actualMinutes + " / " + s.intendedMinutes + " min - " + describeDifference(overrun(s)),
+            el("span", { class: "daily-bar is-" + status(s), "aria-hidden": "true", style: "width:" + (s.actualMinutes / Math.max(...sessions.map(x => x.actualMinutes)) * 100) + "%" })))))),
       pair && el("section", { class: "card verdict", "aria-labelledby": "from-compare-heading" },
         el("h2", { id: "from-compare-heading" }, "From your comparison"), el("p", {}, verdict(...pair))),
       el("section", { class: "card", "aria-labelledby": "pattern-heading" },
