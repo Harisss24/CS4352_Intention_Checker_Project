@@ -14,6 +14,8 @@ You only need a modern web browser (Chrome, Edge, Firefox, or Safari). No Node, 
 
 ### Option 1 — Open the deployed site (Netlify)
 
+Netlify Link: https://intentioncheckergrp1.netlify.app/
+
 If the team has deployed the app to Netlify, open the site link (shown in the repository's **About** section on GitHub) in any browser, on your phone or computer. Nothing to download. Then follow [How the UI works](#how-the-ui-works) below.
 
 The app is a static site, so it can be deployed with no build settings: in Netlify choose **Add new site → Import from GitHub**, select this repository, leave the build command empty, and set the publish directory to the repository root.
